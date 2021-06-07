@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 - Javascript</title>
+</head>
+<body>
+<h2>Atividade 4 - Programando Javascript</h2>
+<br> <br> 
+<h3>1- "Faça um programa que peça dois números ao usuário e mostre qual o maior e qual o menor":</h3>
+<br>
+<label>Insira dois números para que seus valores sejam comparados:</label>
+<br> <br>
+<input type="number" id="num1">
+<label id="res"></label>
+<input type="number" id="num2">
+<br> <br>
+<button type="submit"onclick="inteiro()"> Comparar</button>
+<br> <br> <br>
+
+
+
+<h3>2- "Faça um programa que receba três inteiros e diga qual deles é o maior e qual o menor. Consegue criar mais de uma solução?":</h3>
+<i>Sempre que comparar valores semelhantes, recarrege a página.</i>
+<br> <br> <br>
+<label>Insira três números para que seus valores sejam comparados:</label>
+<br> <br>
+<input type="number" id="num3">
+<input type="number" id="num4">
+<input type="number" id="num5">
+<br> <br>
+<button type="submit" onclick="segundo()">Comparar</button>
+<br> <br><br>
+<label>Maior valor:</label><br><label id="res1"></label>
+<br><br>
+<label>Menor valor:</label><br><label id="res2"></label>
+<br><br>
+<label id="se1"></label>
+<br> <br> <br>
+
+
+
+<h3>3- "Escreva um programa, que recebe um inteiro e diga se é par ou ímpar. Use o operador matemático % (resto da divisão ou módulo) e o teste condicional if.":</h3>
+<br>
+<label>Insira um número para que o site diga se esse é par ou ímpar:</label>
+<br> <br>
+<input type="number" id="num6">
+<br> <br>
+<button type="submit" onclick="terceiro()">Descubra se o número é par ou ímpar</button>
+<br> <br>
+<label id="res5"></label>
+<br> <br> <br>
+
+
+
+<h3>4- "Escreva um programa que pergunte o dia, mês e ano do aniversário de uma pessoa e diga se a data é válida ou não. Caso não seja, diga o motivo. Suponha que todos os meses têm 31 dias e que estejamos no ano de 2021.":</h3>
+<i>Não se esqueça de preencher todos os campos !</i>
+<br> <br><br>
+<label>Digite o dia, mês e ano do seu aniversário:</label>
+<br> <br>
+<label>Dia :</label>
+<input type="number" id="num7">
+<br>
+<label>Mês:</label>
+<input type="number" id="num8">
+<br>
+<label>Ano:</label>
+<input type="number" id="num9">
+<br> <br>
+<button type="submit" onclick="quarta()">Enviar/Validar</button>
+<br> <br>
+<label id="res6"></label>
+<br> <br> <br>
+<i>By: Bernardo Tadeu Alves Carvalho</i>
+<br><br>
+<i>Projeto Beira-Linha</i>
+<br><br><br><br>
+
+
+
+<script>
+    function inteiro(){
+    var n1=parseFloat(document.getElementById("num1").value);
+
+    var n2=parseFloat(document.getElementById("num2").value);
+
+    var resultado=document.getElementById("res");
+
+    if(n1>n2){
+        resultado.innerHTML=">";
+    }
+    else if(n1==n2){
+        resultado.innerHTML="=";
+    }
+
+    if(n1<n2){
+        resultado.innerHTML="<";
+    }
+    else if(n1==n2){
+        resultado.innerHTML="="
+    }
+}
+function segundo(){
+
+var n3=parseInt(document.getElementById("num3").value);
+
+var n4=parseInt(document.getElementById("num4").value);
+
+var n5=parseInt(document.getElementById("num5").value);
+
+var maior=document.getElementById("res1");
+
+var menor=document.getElementById("res2");
+
+var se1=document.getElementById("se1");
+
+maior.innerHTML=Math.max(n3,n4,n5);
+
+menor.innerHTML=Math.min(n3,n4,n5);
+
+if(n3==n4 && n4==n5){
+se1.innerHTML="Todos os valores são iguais";
+}
+if(n3==n4){
+    se1.innerHTML="O 1° e o 2° valor são iguais";
+    }
+    if(n4==n5){
+        se1.innerHTML="O 2° e 3° valor são iguais";
+        }
+        if(n3==n5){
+            se1.innerHTML="O 1° e 3° valor são iguais";
+            }
+            if(n3==n4 && n4==n5){
+                se1.innerHTML="Todos os valores são iguais";
+                }
+}
+
+
+function terceiro(){
+    var n6=parseInt(document.getElementById("num6").value);
+
+    var resultado5=document.getElementById("res5");
+
+if(n6%2==0){
+    resultado5.innerHTML="Par";
+}
+else if(n6%2==1){
+    resultado5.innerHTML="Ímpar";
+}
+}
+
+
+function quarta(){
+    var n7=parseInt(document.getElementById("num7").value);
+
+    var n8=parseInt(document.getElementById("num8").value);
+
+    var n9=parseInt(document.getElementById("num9").value);
+
+    var resultado6=document.getElementById("res6");
+
+if(n7>=1 && n7<=31 && n8>=1 && n8<=12 && n9==2021){
+    resultado6.innerHTML="Data válida";
+}
+else{
+    resultado6.innerHTML="Data inválida";
+}
+}
+
+//By : Bernardo Tadeu Alves Carvalho
+</script>
+
+
+
+</body>
+</html>
+
+<!--By: Bernardo Tadeu Alves Carvalho-->
